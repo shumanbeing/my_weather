@@ -1,0 +1,65 @@
+.wrapper {
+  // width: 100%;
+  // display: grid;
+  // grid-template-columns: 1fr 1fr 0.25fr;
+  // grid-template-rows: 1fr;
+  // box-shadow: 0 0 2rem rgba(0, 0, 255, 0.1);
+  // height: 4rem;
+  // margin: 0;
+  // align-items: center;
+  // transition: background-color 500ms linear;
+  // animation: 1s ease-in-out 0ms 1 fadein;
+  .app_bar {
+    .tool_bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: transparent;
+      box-shadow: 0 0 2rem rgba(0, 0, 255, 0.1);
+      background-color: #fff;
+      .left_section {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        max-width: 5rem;
+        .menu_button {
+          // background: pink;
+          position: relative;
+          // height: 1rem;
+          padding: 0.5rem 1.5rem;
+          margin-right: 1rem;
+          // cursor: pointer;
+          .menu_icon {
+            color: #432c85;
+          }
+          .app_title {
+            margin-left: 1rem;
+            color: #432c85;
+          }
+        }
+      }
+      .Typography {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #432c85;
+        .date_text {
+          text-transform: uppercase;
+          letter-spacing: 0.1rem;
+          display: inline;
+          margin: 0.5rem 0;
+        }
+      }
+      .mode_toggle_container {
+        position: relative;
+        .mode_toggle_text {
+          color: #432c85;
+          font-size: 0.75rem;
+          text-transform: uppercase;
+          letter-spacing: 0.1rem;
+        }
+        .toggle_switch {
+        }
+      }
+    }
+  }
+}
