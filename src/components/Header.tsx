@@ -1,17 +1,32 @@
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Switch from '@material-ui/core/Switch';
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 
 import styles from './Header.module.scss';
+import { Grid } from '@material-ui/core';
+
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    root: {
+      flexGrow: 1,
+    },
+    menuButton: {
+      marginRight: theme.spacing(2),
+    },
+    title: {
+      flexGrow: 1,
+    },
+  })
+);
 
 const Header: React.FC = () => {
   const [state, setState] = React.useState({
-    checkedA: true,
+    checkedA: false,
   });
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -20,40 +35,63 @@ const Header: React.FC = () => {
 
   return (
     <div className={styles.wrapper}>
-      <AppBar className={styles.app_bar} position="static">
-        <Grid container className={styles.tool_bar}>
-          <Grid item lg={1} md={1} sm={12}>
-            <div className={styles.left_section}>
-              <IconButton
-                edge="start"
-                className={styles.menu_button}
-                aria-label="menu"
-              >
-                <MenuIcon className={styles.menu_icon} />
-                <div className={styles.app_title}>Photo</div>
-              </IconButton>
-            </div>
-          </Grid>
-          <Grid item lg={1} md={1} sm={12}>
-            <Typography variant="h6" className={styles.Typography}>
-              <h3 className={styles.date_text}>Today</h3>
-            </Typography>
-          </Grid>
-          <Grid item lg={1} md={1} sm={12}>
-            <div className={styles.mode_toggle_container}>
-              <span className={styles.mode_toggle_text}>Light</span>
-              <Switch
-                checked={state.checkedA}
-                onChange={handleChange}
-                name="checkedA"
-                className={styles.toggle_switch}
-                // inputProps={{ 'aria-label': 'secondary checkbox' }}
+      <Grid container className={styles.container}>
+        <Grid item xs={12} sm={4}>
+          <div className={styles.left_section}>
+            <IconButton
+              edge="start"
+              className={styles.menu_button}
+              aria-label="menu"
+            >
+              <MenuIcon className={styles.menu_icon} />
+            </IconButton>
+
+            <svg className={styles.logo_icon} viewBox="150.3 22.2 213.7 42.8">
+              <path
+                fill="#00ff9b"
+                d="M150.3 65V22.2L193 65z"
+                data-name="Path 1"
               />
-              <span className={styles.mode_toggle_text}>Dark</span>
-            </div>
-          </Grid>
+              <path
+                fill="#003eff"
+                d="M193.1 65h-42.8L193 22.2z"
+                data-name="Path 2"
+              />
+              <text
+                className={styles.logo_text}
+                fill="#432c85"
+                font-family="SegoeUI-Semibold,Segoe UI"
+                font-size="30"
+                font-weight="600"
+                letter-spacing=".1em"
+                transform="translate(237 56)"
+              >
+                <tspan x="0" y="0">
+                  Minimis
+                </tspan>
+              </text>
+            </svg>
+          </div>
         </Grid>
-      </AppBar>
+
+        <Grid item xs={12} sm={4} className={styles.middle_section}>
+          <h3 className={styles.date_text}>Today</h3>
+        </Grid>
+
+        <Grid item xs={12} sm={4} className={styles.right_section}>
+          <div className={styles.mode_toggle_container}>
+            <span className={styles.mode_toggle_text}>Light</span>
+            <Switch
+              checked={state.checkedA}
+              onChange={handleChange}
+              name="checkedA"
+              className={styles.toggle_switch}
+              // inputProps={{ 'aria-label': 'secondary checkbox' }}
+            />
+            <span className={styles.mode_toggle_text}>Dark</span>
+          </div>
+        </Grid>
+      </Grid>
     </div>
   );
 };

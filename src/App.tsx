@@ -9,11 +9,11 @@ import { Container } from '@material-ui/core';
 const App: React.FC = () => {
   return (
     <>
-      <Container className={styles.root_container}>
+      <div className={styles.root_container}>
         <Header></Header>
         <Main></Main>
         <Footer></Footer>
-      </Container>
+      </div>
     </>
   );
 };
