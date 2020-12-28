@@ -1,0 +1,45 @@
+.wrapper {
+  .city_name {
+    .city_icons {
+    }
+  }
+  .temperature_container {
+    .temperature_number_text {
+    }
+    .temperature_metric_text {
+    }
+    .weather_condition_text {
+    }
+  }
+  .min_max_container {
+    .min_container {
+      .min_arrow_icon {
+        height: 1.25rem;
+        margin: auto;
+      }
+      .min_temperature_text {
+        text-align: center;
+        font-size: 2rem;
+      }
+      .min_text {
+        color: #00ff9b;
+        font-size: 1rem;
+      }
+    }
+    .max_container {
+      .max_arrow_icon {
+        height: 1.25rem;
+        margin: auto;
+        margin-bottom: -0.05rem;
+      }
+      .max_temperature_text {
+        text-align: center;
+        font-size: 2rem;
+      }
+      .max_text {
+        color: #ff0070;
+        font-size: 1rem;
+      }
+    }
+  }
+}
