@@ -1,18 +1,66 @@
 .wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  box-shadow: 0 0 2rem #0000ff1a;
+  //中のパーツを全て中央寄せ
+  justify-items: center;
+  //
+  padding: 2rem;
+  margin: 2rem;
+  width: 19rem;
+  height: 30rem;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 1.75rem;
+  animation: 1.25s ease-in-out0ms 1 fadein;
   .city_name {
-    .city_icons {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    letter-spacing: 1rem;
+    margin-bottom: 1rem;
+  }
+  .weather_icon_container {
+    width: 10rem;
+    // margin-bottom: 2rem;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    .weather_icon {
     }
+  }
+  //この表記訳わからん
+  .weather_icon_container > svg {
+    width: 10rem;
   }
   .temperature_container {
     .temperature_number_text {
+      align-self: end;
+      width: 100%;
+      font-size: 3rem;
+      letter-spacing: 0.1rem;
     }
     .temperature_metric_text {
+      text-align: start;
+      font-size: 3rem;
     }
     .weather_condition_text {
+      display: block;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
     }
   }
   .min_max_container {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
     .min_container {
+      margin: 1rem 3rem;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr;
       .min_arrow_icon {
         height: 1.25rem;
         margin: auto;
@@ -24,9 +72,14 @@
       .min_text {
         color: #00ff9b;
         font-size: 1rem;
+        text-align: center;
       }
     }
     .max_container {
+      margin: 1rem 3rem;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr;
       .max_arrow_icon {
         height: 1.25rem;
         margin: auto;
@@ -39,6 +92,7 @@
       .max_text {
         color: #ff0070;
         font-size: 1rem;
+        text-align: center;
       }
     }
   }
