@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './App.module.scss';
+import SideMenu from './components/SideMenu';
 
 import Header from './components/Header';
 import Main from './components/Main';
@@ -10,7 +11,9 @@ const App: React.FC = () => {
   return (
     <>
       <div className={styles.root_container}>
-        <Grid>
+        <SideMenu />
+
+        {/* <Grid>
           <Header></Header>
         </Grid>
         <Grid>
@@ -18,7 +21,7 @@ const App: React.FC = () => {
         </Grid>
         <Grid>
           <Footer></Footer>
-        </Grid>
+        </Grid> */}
       </div>
     </>
   );
