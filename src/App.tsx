@@ -1,31 +1,38 @@
 import React from 'react';
+import { Router } from 'react-router-dom';
 import styles from './App.module.scss';
 import SideMenu from './components/SideMenu';
 
+import history from './history';
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
 import DetailsPage from './components/DetailsPage';
 
 import { Container, Grid } from '@material-ui/core';
+import Routes from './routes/Routes';
 
 const App: React.FC = () => {
   return (
     <>
       <div className={styles.root_container}>
-        {/* <SideMenu /> */}
+        <SideMenu />
 
-        {/* <Grid>
+        <Grid>
           <Header></Header>
         </Grid>
         <Grid>
-          <Main></Main>
+          {/* <Main> */}
+          <Router history={history}>
+            <Routes />
+          </Router>
+          {/* </Main> */}
         </Grid>
         <Grid>
           <Footer></Footer>
-        </Grid> */}
+        </Grid>
 
-        <DetailsPage />
+        {/* <DetailsPage /> */}
       </div>
     </>
   );

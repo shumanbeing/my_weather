@@ -29,9 +29,7 @@ const DetailsPage = () => {
           transform="translate(4572 73)"
         />
       </svg>
-
       {/* ここに戻るボタンを配置 */}
-
       <MainWeatherCard />
     </div>
   );
