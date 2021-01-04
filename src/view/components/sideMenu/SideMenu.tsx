@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Footer from '../footer/Footer';
+
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import Button from '@material-ui/core/Button';
@@ -11,12 +13,11 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 
-import Footer from './Footer';
 import styles from './SideMenu.module.scss';
 
 type Anchor = 'left';
 
-const SideMenu = () => {
+const SideMenu: React.FC = () => {
   const [state, setState] = React.useState({
     left: false,
   });

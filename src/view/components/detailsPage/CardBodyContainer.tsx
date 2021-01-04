@@ -5,7 +5,7 @@ import ForecastNext5Days from './ForecastNext5Days';
 
 import styles from './CardBodyContainer.module.scss';
 
-const CardBodyContainer = () => {
+const CardBodyContainer: React.FC = () => {
   return (
     <div>
       <TwitterFeed />

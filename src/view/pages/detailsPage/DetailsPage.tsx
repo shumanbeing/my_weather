@@ -1,9 +1,9 @@
 import React from 'react';
+import MainWeatherCard from '../../components/detailsPage/MainWeatherCard';
 
-import MainWeatherCard from './details.components/MainWeatherCard';
 import styles from './DetailsPage.module.scss';
 
-const DetailsPage = () => {
+const DetailsPage: React.FC = () => {
   return (
     <div className={styles.details_page_wrapper}>
       <svg

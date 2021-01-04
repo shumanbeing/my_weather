@@ -1,25 +1,24 @@
 import React from 'react';
 import { Router } from 'react-router-dom';
 import styles from './App.module.scss';
-import SideMenu from './components/SideMenu';
+import SideMenu from './view/components/sideMenu/SideMenu';
 
 import history from './history';
-import Header from './components/Header';
-import Main from './components/Main';
-import Footer from './components/Footer';
-import DetailsPage from './components/DetailsPage';
 
-import { Container, Grid } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import Routes from './routes/Routes';
+import Header from './view/components/header/Header';
+import Footer from './view/components/footer/Footer';
+import DetailsPage from './view/pages/detailsPage/DetailsPage';
 
 const App: React.FC = () => {
   return (
     <>
       <div className={styles.root_container}>
-        <SideMenu />
+        {/* <SideMenu /> */}
 
         <Grid>
-          <Header></Header>
+          <Header />
         </Grid>
         <Grid>
           {/* <Main> */}
@@ -29,7 +28,7 @@ const App: React.FC = () => {
           {/* </Main> */}
         </Grid>
         <Grid>
-          <Footer></Footer>
+          <Footer />
         </Grid>
 
         {/* <DetailsPage /> */}

@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from 'DayWeatherContainer.module.scss';
 
-const DayWeatherContainer = () => {
+const DayWeatherContainer: React.FC = () => {
   return <div></div>;
 };
 

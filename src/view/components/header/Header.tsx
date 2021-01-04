@@ -10,20 +10,6 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import styles from './Header.module.scss';
 import { Grid } from '@material-ui/core';
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      flexGrow: 1,
-    },
-    menuButton: {
-      marginRight: theme.spacing(2),
-    },
-    title: {
-      flexGrow: 1,
-    },
-  })
-);
-
 const Header: React.FC = () => {
   const [state, setState] = React.useState({
     checkedA: false,

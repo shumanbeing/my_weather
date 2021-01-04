@@ -4,7 +4,7 @@ import CardBodyContainer from './CardBodyContainer';
 
 import styles from '../details.components/MainWeatherCard.module.scss';
 
-const MainWeatherCard = () => {
+const MainWeatherCard: React.FC = () => {
   return (
     <div className={styles.main_weather_card}>
       <CardHeaderContainer />
