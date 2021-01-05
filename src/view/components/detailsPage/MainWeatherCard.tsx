@@ -2,7 +2,7 @@ import React from 'react';
 import CardHeaderContainer from './CardHeaderContainer';
 import CardBodyContainer from './CardBodyContainer';
 
-import styles from '../details.components/MainWeatherCard.module.scss';
+import styles from './MainWeatherCard.module.scss';
 
 const MainWeatherCard: React.FC = () => {
   return (

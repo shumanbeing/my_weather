@@ -20,15 +20,16 @@
     }
   }
   .body_container {
-    // background-color: blue;
-    // align-self: end;
-    // display: flex;
-    // justify-content: space-between;
-    // align-items: center;
-    // flex-flow: column;
+    background-color: blue;
+    align-self: end;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column;
   }
   .add_icon {
   }
   .city_illustration {
+    width: 20rem;
   }
 }

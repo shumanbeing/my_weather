@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 
 import paths from '../../config/paths';
 import AddCard from '../../view/components/main/addCard/AddCard';
+import AddCityPage from '../../view/pages/addCityPage/AddCityPage';
 import DetailsPage from '../../view/pages/detailsPage/DetailsPage';
 import Main from '../../view/pages/main/Main';
 
@@ -11,7 +12,9 @@ const AfterRoutes: React.FC = () => {
   return (
     <div>
       ログイン後のページです
-      <Main />
+      {/* <Main /> */}
+      {/* <DetailsPage /> */}
+      <AddCityPage />
       <Switch>
         {/* <Route exact path={paths.top} component={Main} /> */}
         {/* <Route exact path={paths.details} component={DetailsPage} /> */}
