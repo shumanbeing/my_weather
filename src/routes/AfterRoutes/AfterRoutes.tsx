@@ -16,7 +16,7 @@ const AfterRoutes: React.FC = () => {
       {/* <DetailsPage /> */}
       <AddCityPage />
       <Switch>
-        {/* <Route exact path={paths.top} component={Main} /> */}
+        {/* <Route exact path={paths.add} component={AddCityPage} /> */}
         {/* <Route exact path={paths.details} component={DetailsPage} /> */}
         {/* <Route exact path={paths.add} component={AddCard} /> */}
       </Switch>

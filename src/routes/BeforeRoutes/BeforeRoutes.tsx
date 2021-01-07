@@ -7,7 +7,7 @@ import paths from '../../config/paths';
 const BeforeRoutes: React.FC = () => {
   return (
     <div>
-      ログイン前のページです
+      {/* ログイン前のページです */}
       <Switch>
         <Route exact path={paths.signin} component={SignIn} />
         <Route exact path={paths.signup} component={SignUp} />

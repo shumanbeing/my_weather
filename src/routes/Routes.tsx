@@ -3,7 +3,7 @@ import AfterRoutes from './AfterRoutes/AfterRoutes';
 import BeforeRoutes from './BeforeRoutes/BeforeRoutes';
 
 const Routes: React.FC = () => {
-  const token = true;
+  const token = false;
   return (
     <>
       {/* main */}
