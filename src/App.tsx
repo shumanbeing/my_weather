@@ -27,9 +27,6 @@ const App: React.FC = () => {
           </Router>
           {/* </Main> */}
         </Grid>
-        <Grid>
-          <Footer />
-        </Grid>
 
         {/* <DetailsPage /> */}
       </div>

@@ -3,19 +3,19 @@ import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 // import Link from '@material-ui/core/Link';
 
-import { TextField, Button } from '@material-ui/core';
+import { Button } from '@material-ui/core';
 import paths from '../../../config/paths';
 
 import styles from './SignIn.module.scss';
 
-interface IFormInput {
+interface UserID {
   email: string;
-  password: number;
+  password: string;
 }
 
 const SignIn: React.FC = () => {
-  const { register, handleSubmit, errors } = useForm<IFormInput>();
-  const onSubmit = (data: IFormInput) => console.log(data);
+  const { register, handleSubmit, errors } = useForm<UserID>();
+  const onSubmit = (data: UserID) => console.log(data);
 
   return (
     <div className={styles.main_container}>
@@ -59,7 +59,7 @@ const SignIn: React.FC = () => {
               variant="contained"
               className={styles.login_button}
             >
-              ログイン
+              Login
             </Button>
           </form>
           <div className={styles.signup_link_wrapper}>
