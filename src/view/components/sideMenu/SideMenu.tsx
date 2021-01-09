@@ -5,6 +5,8 @@ import Drawer from '@material-ui/core/Drawer';
 import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 
 import styles from './SideMenu.module.scss';
 
@@ -64,7 +66,15 @@ const SideMenu: React.FC = () => {
     <div>
       {(['left'] as Anchor[]).map((anchor) => (
         <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
+          <Button onClick={toggleDrawer(anchor, true)}>
+            <IconButton
+              edge="start"
+              className={styles.menu_button}
+              aria-label="menu"
+            >
+              <MenuIcon className={styles.menu_icon} />
+            </IconButton>
+          </Button>
           <Drawer
             anchor={anchor}
             open={state[anchor]}

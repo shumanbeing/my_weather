@@ -31,7 +31,7 @@ const SignIn: React.FC = () => {
             <input
               className={styles.login_input}
               ref={register({
-                required: 'inncorrect',
+                required: '正しくありません',
               })}
               placeholder="Email"
               name="email"
@@ -43,8 +43,7 @@ const SignIn: React.FC = () => {
             <input
               className={styles.login_input}
               ref={register({
-                required: 'inncorrect',
-                minLength: 6,
+                required: '正しくありません',
               })}
               placeholder="Password"
               name="password"

@@ -1,7 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+// import Link from '@material-ui/core/Link';
 import { useForm } from 'react-hook-form';
 
 import styles from './AddCityPage.module.scss';
+import paths from '../../../config/paths';
+import Main from '../main/Main';
 
 const AddCityPage: React.FC = () => {
   return (
@@ -33,9 +37,10 @@ const AddCityPage: React.FC = () => {
             </div>
             <span className={styles.city_search_hr}>o o o</span>
           </div>
-          <div className={styles.city_search_body}></div>
+          <div className={styles.city_search_body}>
+            <Link to={paths.main}>仮のHomeへ戻るボタン</Link>
+          </div>
         </div>
-
         <div className={styles.fav_city_wrapper}>
           <img
             className={styles.fav_city_image}

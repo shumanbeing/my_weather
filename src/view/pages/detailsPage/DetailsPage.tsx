@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import paths from '../../../config/paths';
 import MainWeatherCard from '../../components/detailsPage/MainWeatherCard';
 
 import styles from './DetailsPage.module.scss';
@@ -30,6 +32,9 @@ const DetailsPage: React.FC = () => {
         />
       </svg>
       {/* ここに戻るボタンを配置 */}
+      <Link to={paths.main} className={styles.link}>
+        仮の戻るボタン
+      </Link>
       <MainWeatherCard />
     </div>
   );

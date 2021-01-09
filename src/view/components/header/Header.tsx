@@ -2,13 +2,13 @@ import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
+import { Grid } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Switch from '@material-ui/core/Switch';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-
 import styles from './Header.module.scss';
-import { Grid } from '@material-ui/core';
+
+import SideMenu from '../sideMenu/SideMenu';
 
 const Header: React.FC = () => {
   const [state, setState] = React.useState({
@@ -24,14 +24,7 @@ const Header: React.FC = () => {
       <Grid container className={styles.container}>
         <Grid item xs={12} sm={4}>
           <div className={styles.left_section}>
-            <IconButton
-              edge="start"
-              className={styles.menu_button}
-              aria-label="menu"
-            >
-              <MenuIcon className={styles.menu_icon} />
-            </IconButton>
-
+            <SideMenu />
             <svg className={styles.logo_icon} viewBox="150.3 22.2 213.7 42.8">
               <path
                 fill="#00ff9b"

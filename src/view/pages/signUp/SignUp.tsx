@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 // import Link from '@material-ui/core/Link';
 
 import { Button } from '@material-ui/core';
+import { auth } from '../../../firebase';
 import paths from '../../../config/paths';
 
 import styles from './SignUp.module.scss';
@@ -15,7 +16,15 @@ interface RegisterID {
 
 const SignUp: React.FC = () => {
   const { register, handleSubmit, errors } = useForm<RegisterID>();
-  const onSubmit = (data: RegisterID) => console.log(data);
+  const onSubmit = async (data: RegisterID) => {
+    const { email, password } = data;
+    try {
+      const res = await auth.createUserWithEmailAndPassword(email, password);
+      console.log(res);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <div className={styles.main_container}>
